@@ -34,41 +34,14 @@
       <tr>
       <th>Train Name</th>
       <th>Destination</th>
+      <th>First Time</th>
       <th>Frequency (min)</th>
       <th>Next Arrival</th>
       <th>Minutes Away</th>
       </tr>
       </thead>
 
-      <tbody id="table-body">
-      <tr>
-        <td>Trenton Express</td>
-        <td>Tenton</td>
-        <td>25</td>
-        <td>05:35 PM</td>
-        <td>10</td>  
-      </tr>
-      <tr>
-        <td>Trenton Express</td>
-        <td>Tenton</td>
-        <td>25</td>
-        <td>05:35 PM</td>
-        <td>10</td>  
-      </tr>  
-      <tr>
-        <td>Trenton Express</td>
-        <td>Tenton</td>
-        <td>25</td>
-        <td>05:35 PM</td>
-        <td>10</td>  
-      </tr>
-      <tr>
-        <td>Trenton Express</td>
-        <td>Tenton</td>
-        <td>25</td>
-        <td>05:35 PM</td>
-        <td>10</td>  
-      </tr>
+      <tbody id="train-table-body">
       </tbody>
 
       </table>
@@ -84,12 +57,12 @@
 
     <form>
       <div class="form-group">
-        <label for="employee-name">Train Name:</label>
-        <input type="text" class="form-control" id="employee-nameForm" placeholder="Train Name">
+        <label for="train-name-input">Train Name:</label>
+        <input type="text" class="form-control" id="train-name-input" placeholder="Train Name">
       </div>
       <div class="form-group">
-        <label for="employee-role">Destination:</label>
-        <input type="text" class="form-control" id="employee-roleForm" placeholder="Destination">
+        <label for="train-destination-input">Destination:</label>
+        <input type="text" class="form-control" id="train-destination-input" placeholder="Destination">
       </div>
       <div class="form-group">
         <label for="first-train-time">First Train Time: (HH:mm - military time)</label>
@@ -99,7 +72,7 @@
         <label for="frequency-minutes">Frequency: (min.)</label>
         <input type="text" class="form-control" id="frequency-minutes" placeholder="min">
       </div>        
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
     </form>
 
   </div>
@@ -110,11 +83,7 @@
     </div>
   </div>
   <script src="assets/js/jquery.maskedinput-1.3.1.js"></script>
-  <script type="text/javascript">
-    jQuery(function($){
-       $("#first-train-time").mask("99:99");
-       $("#frequency-minutes").mask("9?99999");
-    });
+  <script src="assets/js/trainlogic.js"></script>
 
   </script>
 </body>
